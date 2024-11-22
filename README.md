@@ -1,9 +1,16 @@
 # AutoEDA
-This application helps for [EDA](https://en.wikipedia.org/wiki/Exploratory_data_analysis)(Exploratory Data Analysis) automatically.
+This application helps for [EDA (Exploratory Data Analysis)](https://en.wikipedia.org/wiki/Exploratory_data_analysis) automatically.
 
 ## Table of contents
 - [Functions](#functions)
 - [TODO](#todo)
+
+## Docker Setting
+**To build and run front-end:**
+```sh
+$ docker-compose down
+$ docker-compose up --build
+```
 
 ## Functions
 - Correlation coefficient
@@ -12,7 +19,7 @@ This application helps for [EDA](https://en.wikipedia.org/wiki/Exploratory_data_
 
 ## TODO
 - Front-end
-    - Login Page
+    - Login Page (complete)
     - Main Page
 
 - Back-end
