@@ -1,10 +1,21 @@
+/* Define color variables */
+:root {
+    --primary-color: #000;
+    --secondary-color: #BFBFBF;
+    --background-color: #ffffff;
+    --border-color: #ccc;
+    --hover-color: #1d1d1d;
+    --text-color: #000;
+    --link-color: #FF9500;
+}
+
 /* Main container layout */
 .login-container {
     display: flex;
     height: 100vh;
     font-family: Arial, sans-serif;
 
-    /* Adjust layout for smaller screens */
+    /* Ensure layout adapts for smaller screens */
     @media screen and (max-width: 768px) {
         flex-direction: column;
         /* Stack content vertically */
@@ -20,46 +31,27 @@
     flex-direction: column;
     justify-content: center;
     /* Center align vertically */
-    align-items: center;
-    /* Center align horizontally */
+    align-items: flex-start;
+    /* Left align horizontally */
     padding: 2rem;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
 
-    /* Smooth transition on resizing */
+    /* Ensure smooth transition on resizing */
     transition: all 0.3s ease;
-
-    /* Adjust alignment for smaller screens */
-    @media screen and (max-width: 768px) {
-        align-items: flex-start;
-        /* Left align content */
-        padding: 1rem;
-        /* Adjust padding */
-        text-align: left;
-        /* Left align text */
-    }
 }
 
 /* Header styles (title and subtitle) */
 .login-header {
-    margin-bottom: 1rem;
-    text-align: start;
-
-    /* Adjust text alignment for smaller screens */
-    @media screen and (max-width: 768px) {
-        text-align: left;
-        width: 100%;
-        /* Ensure it takes full width */
-    }
+    margin-bottom: 1.5rem;
 
     .title {
         font-size: 2rem;
         font-weight: bold;
-        margin-bottom: 0.5rem;
     }
 
     .subtitle {
         font-size: 1rem;
-        color: #666;
+        color: var(--secondary-color);
     }
 }
 
@@ -71,32 +63,54 @@
     margin: 0 auto;
     /* Center the form horizontally */
 
-    /* Align form content to the left for smaller screens */
-    @media screen and (max-width: 768px) {
-        margin: 0;
-        /* Remove auto centering */
-    }
-
     .form-group {
         margin-bottom: 1rem;
+        text-align: left;
 
         .form-label {
             font-size: 0.9rem;
             margin-bottom: 0.5rem;
             display: block;
-            color: #333;
+            color: var(--text-color);
         }
 
         .form-input {
             width: 100%;
             padding: 0.5rem;
-            border: 1px solid #ccc;
+            border: 1px solid var(--border-color);
             border-radius: 4px;
             font-size: 1rem;
 
             &:focus {
-                border-color: #007bff;
+                border-color: var(--primary-color);
                 outline: none;
+            }
+        }
+    }
+
+    .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+
+        .checkbox {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-color);
+
+            input {
+                margin-right: 0.5rem;
+            }
+        }
+
+        .link {
+            font-size: 0.9rem;
+            color: var(--link-color);
+
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
@@ -104,36 +118,32 @@
     .btn-primary {
         width: 100%;
         padding: 0.75rem;
-        background-color: #007bff;
+        background-color: var(--primary-color);
         border: none;
         border-radius: 4px;
         color: #fff;
         font-size: 1rem;
         cursor: pointer;
-    }
 
-    .btn-primary:hover {
-        background-color: #0056b3;
+        &:hover {
+            background-color: var(--hover-color);
+        }
     }
 
     .signup-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin-top: 1rem;
-
-        /* Left-align link content for smaller screens */
-        @media screen and (max-width: 768px) {
-            text-align: left;
-            width: 100%;
-        }
 
         p {
             font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
         }
 
         .link {
             font-size: 0.9rem;
-            color: #007bff;
-            text-decoration: none;
+            color: var(--link-color);
 
             &:hover {
                 text-decoration: underline;
