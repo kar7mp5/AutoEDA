@@ -12,6 +12,12 @@ $ docker-compose down
 $ docker-compose up --build
 ```
 
+**To build and run back-end:**  
+```sh
+$ npx nodemon server.js
+```
+
+
 ## Functions
 - Correlation coefficient
 - Bar plot
